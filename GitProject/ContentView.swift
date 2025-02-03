@@ -15,21 +15,24 @@ struct ContentView: View {
         "Third"
     ]
     var body: some View {
-        VStack {
-            List {
-                ForEach(items, id: \.self) { item in
-                    Text(item)
+        NavigationView {
+            VStack {
+                List {
+                    ForEach(items, id: \.self) { item in
+                        Text(item)
+                    }
                 }
-            }
-            Button("Show Modal") {
-                self.isPresented = true
-            }
-            .sheet(isPresented: $isPresented) {
-                Text("Hello, World!")
+                Button("Show Modal") {
+                    self.isPresented = true
+                }
+                .foregroundColor(.red)
+                .sheet(isPresented: $isPresented) {
+                    ModalView()
                 }
             }
         }
     }
+}
 
 
 #Preview {
