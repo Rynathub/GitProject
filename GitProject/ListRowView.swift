@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct SwiftUIView: View {
+    var item: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: "square.and.arrow.up")
+            Text(item)
+        }
     }
 }
 
-#Preview {
-    SwiftUIView()
-}
+

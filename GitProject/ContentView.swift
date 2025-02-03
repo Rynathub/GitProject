@@ -19,7 +19,7 @@ struct ContentView: View {
             VStack {
                 List {
                     ForEach(items, id: \.self) { item in
-                        Text(item)
+                        
                     }
                 }
                 Button("Show Modal") {
