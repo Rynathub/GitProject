@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isPresented = false
     var items = [
         "First",
         "Second",
@@ -20,10 +21,16 @@ struct ContentView: View {
                     Text(item)
                 }
             }
+            Button("Show Modal") {
+                self.isPresented = true
+            }
+            .sheet(isPresented: $isPresented) {
+                Text("Hello, World!")
+                }
+            }
         }
-        .padding()
     }
-}
+
 
 #Preview {
     ContentView()
