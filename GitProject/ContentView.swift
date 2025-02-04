@@ -17,10 +17,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List {
-                    ForEach(items, id: \.self) { item in
-                        
-                    }
+                NavigationLink(destination: ModalView()) {
+                    Text("Go next")
                 }
                 Button("Show Modal") {
                     self.isPresented = true
