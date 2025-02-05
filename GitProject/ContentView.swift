@@ -23,7 +23,7 @@ struct ContentView: View {
                 Button("Show Modal") {
                     self.isPresented = true
                 }
-                .foregroundColor(.gray)
+                .foregroundColor(.yellow)
                 .sheet(isPresented: $isPresented) {
                     ModalView()
                 }
