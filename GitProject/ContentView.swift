@@ -27,6 +27,9 @@ struct ContentView: View {
                 .sheet(isPresented: $isPresented) {
                     ModalView()
                 }
+                Rectangle()
+                    .fill(Color.blue)
+                    .frame(width: 200, height: 200)
             }
         }
     }
