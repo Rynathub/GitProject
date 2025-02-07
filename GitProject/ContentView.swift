@@ -29,6 +29,7 @@ struct ContentView: View {
                 .sheet(isPresented: $isPresented) {
                     ModalView()
                 }
+                
             }
         }
     }
